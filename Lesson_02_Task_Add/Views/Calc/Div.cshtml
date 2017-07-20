@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Div";
+}
+
+<h2>Div</h2>
+
+<div>
+    Result = @ViewBag.Result<br />
+
+    @Html.ActionLink("Calc/Add/10/20", "Add", "Calc", new { x = 10, y = 20 }, null)
+    <br />
+    @Html.ActionLink("Calc/Mul/5/5", "Mul", "Calc", new { x = 5, y = 5 }, null)
+    <br />
+    @Html.ActionLink("Calc/Sub/10/3", "Sub", "Calc", new { x = 10, y = 3 }, null)
+    <br />
+    @Html.ActionLink("Calc/Div/10/2", "Div", "Calc", new { x = 10, y = 2 }, null)
+    <br />
+</div>
