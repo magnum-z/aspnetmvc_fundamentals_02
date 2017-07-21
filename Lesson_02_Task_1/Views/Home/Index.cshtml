@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <br />
+    @Html.RouteLink("Admin area", new { controller = "Home", action = "Index", area = "Admin" })
+    <br />    
+    @Html.RouteLink("Admin area (Products Index)", new { controller = "Products", action = "Index", area = "Admin" })
+    <br />
+    @Html.RouteLink("Admin area (Products Create)", new { controller = "Products", action = "Create", area = "Admin" })    
+    <br />
+    @Html.RouteLink("Admin area (Products Delete)", new { controller = "Products", action = "Delete", area = "Admin" })
+    <br />
+
+    <br />
+    @Html.ActionLink("Index page", "Index", "Home")
+    <br />    
+    @Html.ActionLink("About page", "About", "Home")
+    <br />
+    @Html.ActionLink("Contacts page", "Contacts", "Home")
+    <br />
+</div>
