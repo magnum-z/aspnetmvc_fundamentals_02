@@ -11,6 +11,7 @@ namespace Lesson_02_Task_Add.Controllers
         // GET: Calc
         public ActionResult Index()
         {
+            ViewBag.Operation = "none";
             return View();
         }
 
@@ -19,9 +20,10 @@ namespace Lesson_02_Task_Add.Controllers
             if (x != null && y != null)
             {
                 ViewBag.Result = x + y;
+                ViewBag.Operation = "Add";
             }
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult Mul(int? x, int? y)
@@ -29,9 +31,10 @@ namespace Lesson_02_Task_Add.Controllers
             if (x != null && y != null)
             {
                 ViewBag.Result = x * y;
+                ViewBag.Operation = "Mul";
             }
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult Sub(int? x, int? y)
@@ -39,9 +42,10 @@ namespace Lesson_02_Task_Add.Controllers
             if (x != null && y != null)
             {
                 ViewBag.Result = x - y;
+                ViewBag.Operation = "Sub";
             }
 
-            return View();
+            return View("Index");
         }
 
         public ActionResult Div(int? x, int? y)
@@ -49,9 +53,10 @@ namespace Lesson_02_Task_Add.Controllers
             if (x != null && y != null)
             {
                 ViewBag.Result = x / y;
+                ViewBag.Operation = "Div";
             }
 
-            return View();
+            return View("Index");
         }
     }
 }

@@ -5,6 +5,11 @@
 
 <h2>Calculator</h2>
 
+@if (ViewBag.Operation != "none")
+{
+    <h2>Result of @ViewBag.Operation: @ViewBag.Result</h2>
+}
+
 <div>
     @Html.ActionLink("Calc/Add/10/20", "Add", "Calc", new { x = 10, y = 20}, null)
     <br />
